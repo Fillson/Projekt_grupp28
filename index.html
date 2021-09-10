@@ -1,79 +1,101 @@
 <!DOCTYPE html>
 <html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekt grupp28</title>
 
-  <title>Projekt grupp28</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script defer src="script.js"></script>
+  </head>
 
+  <body>
+    <header class="header">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#om-oss">Om oss</a></li>
+          <li>
+            <a class="main-nav-link" href="#kontakta-oss">Kontakta oss</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
+        </ul>
+      </nav>
 
-  <script defer src="script.js"></script>
-</head>
-
-<body>
-  <header class="header">
-    <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li><a class="main-nav-link" href="#om-oss">Om oss</a></li>
-        <li><a class="main-nav-link" href="#kontakta-oss">Kontakta oss</a></li>
-        <li>
-          <a class="main-nav-link" href="#portfolio">Portfolio</a>
-        </li>
-        <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
-        <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
-      </ul>
-    </nav>
-
-    <!---
+      <!---
       <button class="btn-mobile-nav">
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
         <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
       </button> 
-    -->
-  </header>
-  <main>
-    <div class="hero">
-      <div class="hero-slides fade">
-        <img src="img/hero-img.jpg" class="hero-img">
+    --></header>
+    <main>
+      <div class="hero">
+        <div class="hero-slides fade">
+          <img src="img/hero-img.jpg" class="hero-img" />
+          <div class="info">
+            <h2 class="sub-heading">Utvecklare</h2>
+          </div>
+        </div>
+
+        <div class="hero-slides fade">
+          <img src="img/hero-img2.jpg" class="hero-img" />
+          <div class="info">
+            <h2 class="sub-heading">Utvecklare</h2>
+          </div>
+        </div>
+
+        <div class="hero-slides fade">
+          <img src="img/hero-img3.jpg" class="hero-img" />
+          <div class="info">
+            <h2 class="sub-heading">Utvecklare</h2>
+          </div>
+        </div>
+
+        <div class="hero-slides fade">
+          <img src="img/hero-img4.jpg" class="hero-img" />
+          <div class="info">
+            <h2 class="sub-heading">Baserade i Stockholm</h2>
+          </div>
+        </div>
+
+        <!-- TEST KOD
+        <div class="slide-btns">
+          <i class="fas fa-chevron-left prev-btn"></i>
+          <i class="fas fa-chevron-right next-btn"></i>
+        </div>
+        <div class="slide-btns-visibility">
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+        </div>
+        -->
+
+        <!-- next and previous buttons -->
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!--The dots/circles -->
+        <div class="dots-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
       </div>
 
-      <div class="hero-slides fade" onClick="pauseSlide()">
-        <img src="img/hero-img2.jpg" class="hero-img">
-      </div>
-
-      <div class="hero-slides fade">
-        <img src="img/hero-img3.jpg" class="hero-img">
-      </div>
-
-      <div class="hero-slides fade">
-        <img src="img/hero-img4.jpg" class="hero-img">
-      </div>
-
-      <!-- next and previous buttons -->
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
-      <!-- The dots/circles -->
-      <div class="dots-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-      </div>
-
-    </div>
-
-    <br>
-
-
-  </main>
-</body>
-
+      <br />
+    </main>
+  </body>
 </html>
