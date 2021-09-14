@@ -1,9 +1,5 @@
-
-
-
-
 var slideIndex = 0;
-var autoSlideTimeout = 5000; //(Keeping timeout as variable is also a good idea)
+let autoSlideTimeout = 5000; //(Keeping timeout as variable is also a good idea)
 showSlides();
 var slides, dots, timerHandler;
 
@@ -25,7 +21,7 @@ function plusSlides(position) {
   dots[slideIndex - 1].className += " active";
 
   // Resets the timer
-  clearTimeout(timerHandler)
+  clearTimeout(timerHandler);
   // Starts the timer again
   timerHandler = setTimeout(showSlides, autoSlideTimeout);
 }
@@ -47,7 +43,7 @@ function currentSlide(index) {
   dots[index - 1].className += " active";
 
   // Resets the timer
-  clearTimeout(timerHandler)
+  clearTimeout(timerHandler);
   // Starts the timer again
   timerHandler = setTimeout(showSlides, autoSlideTimeout);
 }
@@ -73,11 +69,11 @@ function showSlides() {
 }
 
 // The function will reset the timer once the pause btn is clicked
-function pauseSlide (){
+function pauseSlide() {
   clearTimeout(timerHandler);
 }
 
 // The function will start the timer once the button is clicked
-function playSlide () {
-  timerHandler = setTimeout(showSlides, autoSlideTimeout);
+function playSlide() {
+  timerHandler = setTimeout(showSlides, 500);
 }
