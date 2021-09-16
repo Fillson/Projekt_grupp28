@@ -48,7 +48,8 @@ function currentSlide(index) {
   timerHandler = setTimeout(showSlides, autoSlideTimeout);
 }
 
-// function for the automatic slideshow
+
+// function for the automatic slideshow startsida
 function showSlides() {
   var i;
   slides = document.getElementsByClassName("hero-slides");

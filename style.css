@@ -34,7 +34,7 @@ Hover color: #0b7285
 
 body {
   font-family: "Rubik", sans-serif;
-  line-height: 1;
+  line-height: 1.5;
   font-weight: 400;
   color: #555;
 }
@@ -121,6 +121,7 @@ body {
   margin: auto;
 
   position: relative;
+  margin-bottom: 50px;
 }
 
 /* Hide the images by default */
@@ -128,13 +129,16 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
+  border: none;
 }
 
 .hero-img {
   height: 800px;
   width: 100%;
-  background-size: cover;
-  opacity: 0.5;
+  object-fit: cover;
+  overflow: hidden;
+  opacity: 0.4;
+  border: none;
 }
 
 /* Next & previous buttons */
@@ -252,64 +256,138 @@ body {
 }
 
 /****************/
-/* Portfolio "Om Oss" Section */
+/* Om Oss Section */
 /*****************/
 
-/* Style för namnen i "Om Oss" sektionen */
+.om-oss-sektion {
+  max-width: 100%;
+  margin: auto;
 
-.list-portfolio-namn {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 190px;
-  margin: 15px auto;
-  list-style-type: none;
-  padding: 0;
-  font-weight: 700;
+  position: relative;
+  margin-bottom: 50px;
 }
 
-/* Style för Bilderna i Om Oss */
+.om-oss-carousell {
+  max-width: 1400px;
+  margin: 100px auto;
+  background-color: #15aabf;
+  padding: 32px 48px 32px 86px;
 
-.list-portfolio-bilder {
+  border-radius: 8px;
+  position: relative;
+
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 120px;
-  margin: 0 auto;
-  list-style-type: none;
-  padding: 0;
+  gap: 86px;
 }
 
-/* Style för "Om oss" Headern */
+.carousell-img {
+  height: 250px;
+  border-radius: 8px;
+  transform: scale(1.5);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
 
-.om-oss {
+.testimonial-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  color: #e6fcf5;
+}
+
+.testimonial-author {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #c3fae8;
+}
+
+.testimonial-job {
+  font-size: 12px;
+  color: #c3fae8;
+}
+
+/* CONTROLS */
+.carousell-btn {
+  background-color: #fff;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--left {
+  /* In relation to PARENTE ELEMENT */
+  left: 0px;
+  top: 50%;
+
+  /* In relation to ELEMENT ITSELF */
+  transform: translate(-50%, -50%);
+}
+
+.btn--right {
+  right: 0px;
+  top: 50%;
+
+  transform: translate(50%, -50%);
+}
+
+.btn-icon {
+  height: 24px;
+  width: 24px;
+  stroke: #15aabf;
+}
+.carousell-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 32px);
+
+  display: flex;
+  gap: 12px;
+}
+
+.carousell-dot {
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border: 2px solid #15aabf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot--fill {
+  background-color: #0b7285;
+}
+
+/* Style för "Om oss" Headern samt brödtext*/
+.om-oss-h2 {
   text-align: center;
 }
 
-/* Individuell klass som stylar bilderna i listen */
-
-.list-img {
-  height: 300px;
-  width: auto;
-  border-radius: 50%;
-  border-style: none;
+.om-oss-p {
+  text-align: center;
 }
-
-/* Style (placering) för knapparna under bilderna i Om Oss */
-.om-oss-btns {
-  display: flex;
-  justify-content: center;
-  gap: 200px;
-}
-
 /****************/
 /* KONTAKTA OSS SEKTION */
 /****************/
 
 .section-kontakta-oss {
   margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.kontakta-oss-container {
+  max-width: 1400px;
+  padding: 0 32px;
+  margin: 0 auto;
 }
 
 .kontakta-oss {
@@ -351,12 +429,12 @@ body {
 
 .kontakta-oss input {
   width: 100%;
-  padding: 1.2rem;
-  font-size: 1.8rem;
+  padding: 12px;
+  font-size: 16px;
   font-family: inherit;
   color: inherit;
   border: none;
-  background-color: #0c8599;
+  background-color: #15aabf;
   border-radius: 9px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -371,19 +449,13 @@ body {
   box-shadow: 0 0 0 8px rgba(253, 242, 233, 0.5);
 }
 
-.kontakta-oss-container {
-  max-width: 1200px;
-  padding: 0 32px;
-  margin: 0 auto;
-}
-
 .kontakta-oss-img-box {
   background-image: linear-gradient(
       to right bottom,
       rgba(78, 225, 235, 0.35),
       rgba(34, 158, 230, 0.35)
     ),
-    url("/img/portfolio-img.jpg");
+    url("/img/form-img.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -406,4 +478,88 @@ body {
 .btn-form:hover {
   background-color: #0b7285;
   color: #fff;
+}
+
+/****************/
+/* FOOTER */
+/****************/
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #24262b;
+  padding-top: 70px;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #15aabf;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #3c3f44;
+  background-color: #ffffff;
+}
+
+.outer-footer {
+  padding: 15px;
+  text-align: center;
+  margin: 0;
+  color: #bbbbbb;
+  font-size: 15px;
 }
