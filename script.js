@@ -77,12 +77,9 @@ function pauseSlide() {
 function playSlide() {
   timerHandler = setTimeout(showSlides, 500);
 }
-/*
-// FUNKAR EJ JUST NU
+
 // Carousell funktion för om oss sektion
-const btnLeft = document.querySelector(".btn--left");
-const btnRight = document.querySelector(".btn--right");
-const carousellSlides = document.getElementsByClassName("carousell-Slides");
+const carousellSlides = document.getElementsByClassName("carousell-slides");
 let carousellIndex = 1;
 showCarousell(carousellIndex);
 
@@ -98,6 +95,5 @@ function showCarousell(n) {
   for (i = 0; i < carousellSlides.length; i++) {
     carousellSlides[i].style.display = "none";
   }
-  carousellSlides[carousellIndex - 1].style.display = "block";
+  carousellSlides[carousellIndex - 1].style.display = "flex";
 }
-*/
