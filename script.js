@@ -48,7 +48,6 @@ function currentSlide(index) {
   timerHandler = setTimeout(showSlides, autoSlideTimeout);
 }
 
-
 // function for the automatic slideshow startsida
 function showSlides() {
   var i;
@@ -78,3 +77,27 @@ function pauseSlide() {
 function playSlide() {
   timerHandler = setTimeout(showSlides, 500);
 }
+/*
+// FUNKAR EJ JUST NU
+// Carousell funktion för om oss sektion
+const btnLeft = document.querySelector(".btn--left");
+const btnRight = document.querySelector(".btn--right");
+const carousellSlides = document.getElementsByClassName("carousell-Slides");
+let carousellIndex = 1;
+showCarousell(carousellIndex);
+
+function changeSlides(n) {
+  showCarousell((carousellIndex += n));
+}
+
+function showCarousell(n) {
+  let i;
+  if (n > carousellSlides.length) {
+    carousellIndex = 1;
+  }
+  for (i = 0; i < carousellSlides.length; i++) {
+    carousellSlides[i].style.display = "none";
+  }
+  carousellSlides[carousellIndex - 1].style.display = "block";
+}
+*/

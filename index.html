@@ -2,7 +2,7 @@
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
-    <meta ht  tp-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta ht tp-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Projekt grupp28</title>
@@ -12,7 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
 
     <script defer src="script.js"></script>
   </head>
@@ -98,77 +102,96 @@
         </div>
       </div>
 
-      <!--Headers för individuella personer samt slideshow-->
-      <div class="om-oss-sektion">
+      <!--Carousel slideshow för om oss sektion -->
+      <section class="om-oss-sektion">
         <h2 class="om-oss-h2">Om oss:</h2>
         <div class="om-oss-carousell">
-            <img src="img/portfolio-img.jpg" class="carousell-img" alt="Mörkhyad Nele" />
-            <blockquote class="testimonial">
-            <div class="testimonial-div">
+          <!-- <div class="carousell-slides"> -->
+          <div class="carousell-slides">
+            <img
+              src="img/portfolio-img.jpg"
+              class="carousell-img"
+              alt="Mörkhyad Nele"
+            />
+          </div>
+          <div class="carousell-slides">
+            <img
+              src="img/filip-img.jpg"
+              class="carousell-img"
+              alt="Mörkhyad Nele"
+            />
+          </div>
+          <blockquote class="testimonial">
+            <p class="testimonial-text">"Älskar att koda"</p>
+            <p class="testimonial-author">Andreas Nelefelt</p>
+            <p class="testimonial-job">Senior developer</p>
+          </blockquote>
+          <!--
 
-              <p class="testimonial-text">
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
-                nesciunt aliquid ex atque quibusdam. Rerum officia unde suscipit quo
-                sunt hic illo fugit."
-              </p>
-              <p class="testimonial-author">Maria de Almeida</p>
-              <p class="testimonial-job">Senior Product Manager at EDP Comercial</p>
-            </blockquote>
-            
-            <button class="carousell-btn btn--left">
-              <svg
+            <div class="carousell-slides">
+              
+              <img src="img/filip-img.jpg" class="carousell-img" alt="Bild på Filip Sanderfelt" />
+              <blockquote class="testimonial">
+                <p class="testimonial-text">
+                  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+                  nesciunt aliquid ex atque quibusdam. Rerum officia unde suscipit quo
+                  sunt hic illo fugit."
+                </p>
+                <p class="testimonial-author">Filip Sanderfelt</p>
+                <p class="testimonial-job">Senior Developer</p>
+              </blockquote>
+            </div>
+          -->
+
+          <button class="carousell-btn btn--left" onclick="changeSlides(-1)">
+            <svg
               xmlns="http://www.w3.org/2000/svg"
               class="btn-icon"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              >
+            >
               <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 19l-7-7 7-7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
               />
             </svg>
           </button>
-          <button class="carousell-btn btn--right">
+          <button class="carousell-btn btn--right" onclick="changeSlides(1)">
             <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="btn-icon"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              class="btn-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-            <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
-        <div class="carousell-dots">
-          <button class="carousell-dot dot--fill">&nbsp;</button>
-          <button class="carousell-dot">&nbsp;</button>
-          <button class="carousell-dot">&nbsp;</button>
-          <button class="carousell-dot">&nbsp;</button>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+          <div class="carousell-dots">
+            <button class="carousell-dot dot--fill">&nbsp;</button>
+            <button class="carousell-dot">&nbsp;</button>
+            <button class="carousell-dot">&nbsp;</button>
+            <button class="carousell-dot">&nbsp;</button>
+          </div>
         </div>
-        
-      </div>
-      
-      <!-- Next and Previous buttons-->
-      
-      
-      
-    </div>
-    <p class="om-oss-p"> Vi är ett gäng washed-up stundentkodare som knappt kan kod, anlita oss om ni vill ha det sloppigaste jobbet framtaget av ORU. Bla bla bla, bla bla bla
-      bla bla. Bla bla bla bla bla bla....
-    </p>
-  </div>
-    
-    <br />
-  </main>
-  <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+        <p class="om-oss-p">
+          Vi är ett gäng washed-up stundentkodare som knappt kan kod, anlita oss
+          om ni vill ha det sloppigaste jobbet framtaget av ORU. Bla bla bla,
+          bla bla bla bla bla. Bla bla bla bla bla bla....
+        </p>
+      </section>
+
+      <br />
+    </main>
+    <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
 
     <section class="section-kontakta-oss" id="kontakta-oss">
       <div class="kontakta-oss-container">
@@ -205,12 +228,22 @@
 
               <div>
                 <label for="telephone">Telefon</label>
-                <input id="telephone" type="tel" placeholder="070112233" />
+                <input
+                  id="telephone"
+                  type="tel"
+                  placeholder="070112233"
+                  required
+                />
               </div>
 
               <div>
                 <label for="message">Meddelande</label>
-                <input id="message" type="text" placeholder="Skriv ditt meddelande här" />
+                <input
+                  id="message"
+                  type="text"
+                  placeholder="Skriv ditt meddelande här"
+                  required
+                />
               </div>
 
               <button class="btn-form">Skicka</button>
@@ -242,7 +275,6 @@
               <li><a href="#">FAQ</a></li>
               <li><a href="#">Humlegårdsgatan 14, 111 23 Stockholm</a></li>
               <li><a href="#">Telefon: 08-27 25 00</a></li>
-              
             </ul>
           </div>
           <div class="footer-col">
@@ -265,13 +297,10 @@
           </div>
         </div>
       </div>
-    
-      
+
       <div class="outer-footer">
         Copyright &#169; Grupp 28. All Right Reserved.
-        
-
       </div>
-   </footer>
+    </footer>
   </body>
 </html>
