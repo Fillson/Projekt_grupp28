@@ -89,9 +89,11 @@ function changeSlides(n) {
 
 function showCarousell(n) {
   let i;
+  const carouselDot = document.getElementsByClassName("carousel-dot");
   if (n > carousellSlides.length) {
     carousellIndex = 1;
   }
+
   for (i = 0; i < carousellSlides.length; i++) {
     carousellSlides[i].style.display = "none";
   }

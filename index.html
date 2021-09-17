@@ -69,10 +69,10 @@
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
           <!-- Pause and play buttons -->
-          <a class="pause pause-left fade" onclick="pauseSlide()"
+          <a class="pause pause-left" onclick="pauseSlide()"
             ><strong>| |</strong></a
           >
-          <a class="pause pause-right fade" onclick="playSlide()"
+          <a class="pause pause-right" onclick="playSlide()"
             ><span class="play-icon"><strong>&#10151;</strong></span></a
           >
         </div>
@@ -105,8 +105,8 @@
       <!--Carousel slideshow för om oss sektion -->
       <section class="om-oss-sektion">
         <h2 class="om-oss-h2">Om oss:</h2>
-        <div class="om-oss-carousell">
-          <div class="carousell-slides fade">
+        <div class="om-oss-carousell" id="om-oss-carousell">
+          <div class="carousell-slides" id="carousel-slides">
             <img
               src="img/andreas-img.jpg"
               class="carousell-img"
@@ -123,7 +123,7 @@
               <p class="testimonial-job">Senior developer</p>
             </blockquote>
           </div>
-          <div class="carousell-slides fade">
+          <div class="carousell-slides" id="carousel-slides">
             <img
               src="img/filip-img.jpg"
               class="carousell-img"
@@ -140,7 +140,7 @@
               <p class="testimonial-job">Senior developer</p>
             </blockquote>
           </div>
-          <div class="carousell-slides fade">
+          <div class="carousell-slides" id="carousel-slides">
             <img
               src="img/filip-img.jpg"
               class="carousell-img"
@@ -157,7 +157,7 @@
               <p class="testimonial-job">Junior developer</p>
             </blockquote>
           </div>
-          <div class="carousell-slides fade">
+          <div class="carousell-slides" id="carousel-slides">
             <img
               src="img/peter-img.jpg"
               class="carousell-img"
@@ -238,13 +238,7 @@
             <form class="kontakta-oss-form" name="kontakt" netlify>
               <div>
                 <label for="full-name">Fulltständigt namn</label>
-                <input
-                  id="full-name"
-                  type="text"
-                  placeholder="Andreas Johansson"
-                  name="full-name"
-                  required
-                />
+                <input id="full-name" type="text" name="full-name" required />
               </div>
 
               <div>
@@ -260,12 +254,7 @@
 
               <div>
                 <label for="telephone">Telefon</label>
-                <input
-                  id="telephone"
-                  type="tel"
-                  placeholder="070112233"
-                  required
-                />
+                <input id="telephone" type="tel" required />
               </div>
 
               <div>

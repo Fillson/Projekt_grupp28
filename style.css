@@ -284,8 +284,22 @@ body {
   display: flex;
   align-items: center;
   gap: 86px;
+
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
 }
 
+@keyframes carousell-slides {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: 100%;
+  }
+}
 .carousell-img {
   height: 250px;
   width: 160px;
@@ -405,6 +419,7 @@ body {
   grid-template-columns: 2fr 1fr;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
   border-radius: 11px;
+  overflow: hidden;
 }
 
 .kontakta-text-box {
@@ -465,8 +480,8 @@ body {
 .kontakta-oss-img-box {
   background-image: linear-gradient(
       to right bottom,
-      rgba(78, 225, 235, 0.35),
-      rgba(34, 158, 230, 0.35)
+      rgba(0, 0, 20, 0.4),
+      rgba(0, 0, 0, 0.4)
     ),
     url("/img/form-img.jpg");
   background-size: cover;
