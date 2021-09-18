@@ -67,7 +67,7 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 64px;
 }
 
 .main-nav-link:link,
@@ -142,19 +142,32 @@ body {
 
 /* Next & previous buttons */
 .prev,
-.next {
-  cursor: pointer;
+.next,
+.pause {
+  /* position */
   position: absolute;
   top: 50%;
-  width: auto;
-  margin-top: -22px;
+  /* box model - width would go here, but `width: auto` should be doing nothing */
+  width: 3em;
+  height: 3em;
   padding: 16px;
+  aspect-ratio: 1/1;
+
+  border-radius: 0 3px 3px 0;
+  margin-top: -22px; /* don't like this, particularly when using `position: absolute` */
+
+  /* font */
   color: white;
   font-weight: bold;
   font-size: 18px;
+
+  /* interactions */
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
+  cursor: pointer;
+}
+ion-icon {
+  font-size: 25px;
 }
 
 /* Positions the "prev button" to the left*/
@@ -174,31 +187,21 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Pause and Play buttons */
-.pause {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  display: hide;
-}
-
 /* On hover, add a black background color with a little bit see-through */
 .pause:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 .pause-left {
-  left: 50px;
+  left: 60px;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 11px;
 }
 
 .pause-right {
-  right: 50px;
+  right: 60px;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 12.5px;
 }
 
 .play-icon {
@@ -209,6 +212,7 @@ body {
 .dots-container {
   text-align: center;
   margin-top: 32px;
+  margin-bottom: 100px;
 }
 
 .dot {
@@ -260,107 +264,121 @@ body {
 
 .om-oss-sektion {
   max-width: 100%;
+  height: 300px;
   margin: auto;
 
-  position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
-.om-oss-carousell {
-  max-width: 1400px;
-  margin: 100px auto;
-  background-color: #15aabf;
-  padding: 32px 48px 32px 86px;
+.om-oss-testimonial {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
-  border-radius: 8px;
+.testimonial-box {
+  width: 90%;
+  max-width: 1200px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.25);
   position: relative;
+  overflow: hidden;
+  background: #15aabf;
+}
 
+.card {
+  height: 300px;
+  padding: 25px;
+  color: #fff;
+  line-height: 22px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.profile {
   display: flex;
   align-items: center;
-  gap: 86px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  gap: 40px;
 }
 
-.carousell-slides {
-  display: flex;
-  align-items: center;
-  gap: 86px;
-
-  animation: slide 0.5s forwards;
-  animation-delay: 2s;
-}
-
-@keyframes carousell-slides {
-  0% {
-    left: 0;
-  }
-  20% {
-    left: 0;
-  }
-  25% {
-    left: 100%;
-  }
-}
-.carousell-img {
-  height: 250px;
-  width: 160px;
+.profile img {
+  height: 200px;
+  width: 150px;
   border-radius: 8px;
-  transform: scale(1.5);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
 .testimonial-text {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.5;
-  margin-bottom: 32px;
+  padding: 56px 0;
+  margin-right: 100px;
+  font-size: 24px;
   color: #e6fcf5;
 }
 
-.testimonial-author {
-  font-size: 16px;
+.testimonial-namn {
+  font-size: 18px;
   margin-bottom: 4px;
   color: #c3fae8;
 }
 
-.testimonial-job {
-  font-size: 14px;
+.testimonial-jobb {
+  font-size: 16px;
   color: #c3fae8;
 }
 
+.testimonial-slide {
+  width: 100%;
+  box-sizing: border-box;
+
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: 0.5s;
+}
+
+.testimonial-sidebar {
+  width: 60px;
+  height: 100%;
+  padding: 15px 0;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* CONTROLS */
-.carousell-btn {
+.testimonial-btn {
   background-color: #fff;
   border: none;
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  position: absolute;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 }
 
-.carousell-btn:hover .btn-icon {
-  stroke: #0b7285;
-}
-
-.btn--left {
+.btn--down {
   /* In relation to PARENTE ELEMENT */
-  left: 0px;
-  top: 50%;
-
+  top: 83%;
   /* In relation to ELEMENT ITSELF */
-  transform: translate(-50%, -50%);
-}
-
-.btn--right {
-  right: 0px;
-  top: 50%;
-
-  transform: translate(50%, -50%);
 }
 
 .btn-icon {
@@ -368,27 +386,9 @@ body {
   width: 24px;
   stroke: #15aabf;
 }
-.carousell-dots {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 32px);
 
-  display: flex;
-  gap: 12px;
-}
-
-.carousell-dot {
-  height: 12px;
-  width: 12px;
-  background-color: #fff;
-  border: 2px solid #15aabf;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dot--fill {
-  background-color: #0b7285;
+.testimonial-btn:hover .btn-icon {
+  stroke: #0b7285;
 }
 
 /* Style för "Om oss" Headern samt brödtext*/

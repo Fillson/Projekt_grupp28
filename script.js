@@ -67,35 +67,39 @@ function showSlides() {
   dots[slideIndex - 1].className += " active";
   timerHandler = setTimeout(showSlides, autoSlideTimeout);
 }
+// function för Pause och Play knappar
+function pauseAndPlaySlide() {
+  const icon1 = document.querySelector(".pause-left ion-icon");
+  const icon2 = document.querySelector(".pause-right ion-icon");
 
-// The function will reset the timer once the pause btn is clicked
-function pauseSlide() {
-  clearTimeout(timerHandler);
-}
-
-// The function will start the timer once the button is clicked
-function playSlide() {
-  timerHandler = setTimeout(showSlides, 500);
+  if (icon1.name === "pause-outline") {
+    icon1.name = "play-outline";
+    icon2.name = "play-outline";
+    clearTimeout(timerHandler);
+  } else {
+    icon1.name = "pause-outline";
+    icon2.name = "pause-outline";
+    timerHandler = setTimeout(showSlides, 500);
+  }
 }
 
 // Carousell funktion för om oss sektion
-const carousellSlides = document.getElementsByClassName("carousell-slides");
-let carousellIndex = 1;
-showCarousell(carousellIndex);
+const testimonialSlide = document.querySelector(".testimonial-slide");
+const btnDown = document.querySelector(".btn--down");
+const btnUp = document.querySelector(".btn--up");
 
-function changeSlides(n) {
-  showCarousell((carousellIndex += n));
-}
+let x = 0;
 
-function showCarousell(n) {
-  let i;
-  const carouselDot = document.getElementsByClassName("carousel-dot");
-  if (n > carousellSlides.length) {
-    carousellIndex = 1;
+btnDown.onclick = function () {
+  if (x > -900) {
+    x = x - 300;
+    testimonialSlide.style.top = x + "px";
   }
+};
 
-  for (i = 0; i < carousellSlides.length; i++) {
-    carousellSlides[i].style.display = "none";
+btnUp.onclick = function () {
+  if (x < 0) {
+    x = x + 300;
+    testimonialSlide.style.top = x + "px";
   }
-  carousellSlides[carousellIndex - 1].style.display = "flex";
-}
+};

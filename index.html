@@ -25,15 +25,15 @@
     <header class="header">
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#om-oss">Om oss</a></li>
+          <li>
+            <a class="main-nav-link" href="#om-oss-testimonial">Om oss</a>
+          </li>
           <li>
             <a class="main-nav-link" href="#kontakta-oss">Kontakta oss</a>
           </li>
           <li>
             <a class="main-nav-link" href="#portfolio">Portfolio</a>
           </li>
-          <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
-          <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
         </ul>
       </nav>
 
@@ -69,12 +69,14 @@
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
           <!-- Pause and play buttons -->
-          <a class="pause pause-left" onclick="pauseSlide()"
-            ><strong>| |</strong></a
-          >
-          <a class="pause pause-right" onclick="playSlide()"
-            ><span class="play-icon"><strong>&#10151;</strong></span></a
-          >
+          <a
+            class="pause pause-left fade js--nav-icon"
+            onclick="pauseAndPlaySlide()"
+            ><ion-icon name="pause-outline"></ion-icon
+          ></a>
+          <a class="pause pause-right fade" onclick="pauseAndPlaySlide()"
+            ><ion-icon name="pause-outline"></ion-icon
+          ></a>
         </div>
 
         <div class="hero-slides fade">
@@ -103,122 +105,111 @@
       </div>
 
       <!--Carousel slideshow för om oss sektion -->
-      <section class="om-oss-sektion">
+      <section class="om-oss-sektion" id="om-oss-sektion">
         <h2 class="om-oss-h2">Om oss:</h2>
-        <div class="om-oss-carousell" id="om-oss-carousell">
-          <div class="carousell-slides" id="carousel-slides">
-            <img
-              src="img/andreas-img.jpg"
-              class="carousell-img"
-              alt="Bild på Andreas Nelefelt"
-            />
-            <blockquote>
-              <p class="testimonial-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Reiciendis autem, vel temporibus itaque error beatae quidem
-                praesentium nihil, deserunt delectus eius recusandae illum eos
-                qui pariatur aliquid repellendus dolores perspiciatis.
-              </p>
-              <p class="testimonial-author">Andreas Nelefelt</p>
-              <p class="testimonial-job">Senior developer</p>
-            </blockquote>
-          </div>
-          <div class="carousell-slides" id="carousel-slides">
-            <img
-              src="img/filip-img.jpg"
-              class="carousell-img"
-              alt="Bild på Filip Sanderfelt"
-            />
-            <blockquote>
-              <p class="testimonial-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Reiciendis autem, vel temporibus itaque error beatae quidem
-                praesentium nihil, deserunt delectus eius recusandae illum eos
-                qui pariatur aliquid repellendus dolores perspiciatis.
-              </p>
-              <p class="testimonial-author">Filip Sanderfelt</p>
-              <p class="testimonial-job">Senior developer</p>
-            </blockquote>
-          </div>
-          <div class="carousell-slides" id="carousel-slides">
-            <img
-              src="img/filip-img.jpg"
-              class="carousell-img"
-              alt="Bild på Gustav Håkansson"
-            />
-            <blockquote>
-              <p class="testimonial-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Reiciendis autem, vel temporibus itaque error beatae quidem
-                praesentium nihil, deserunt delectus eius recusandae illum eos
-                qui pariatur aliquid repellendus dolores perspiciatis.
-              </p>
-              <p class="testimonial-author">Gustav Håkansson</p>
-              <p class="testimonial-job">Junior developer</p>
-            </blockquote>
-          </div>
-          <div class="carousell-slides" id="carousel-slides">
-            <img
-              src="img/peter-img.jpg"
-              class="carousell-img"
-              alt="Bild på Peter Thunvall"
-            />
-            <blockquote>
-              <p class="testimonial-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Reiciendis autem, vel temporibus itaque error beatae quidem
-                praesentium nihil, deserunt delectus eius recusandae illum eos
-                qui pariatur aliquid repellendus dolores perspiciatis.
-              </p>
-              <p class="testimonial-author">Peter Thunvall</p>
-              <p class="testimonial-job">Junior developer</p>
-            </blockquote>
-          </div>
-
-          <button class="carousell-btn btn--left" onclick="changeSlides(-1)">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="btn-icon"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button class="carousell-btn btn--right" onclick="changeSlides(1)">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="btn-icon"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-          <div class="carousell-dots">
-            <button class="carousell-dot dot--fill">&nbsp;</button>
-            <button class="carousell-dot">&nbsp;</button>
-            <button class="carousell-dot">&nbsp;</button>
-            <button class="carousell-dot">&nbsp;</button>
+        <div class="om-oss-testimonial">
+          <div class="testimonial-box">
+            <div class="testimonial-slide" id="testimonial-slide">
+              <div class="card">
+                <div class="profile">
+                  <img src="img/andreas-img.jpg" />
+                  <div>
+                    <blockquote class="testimonial-text">
+                      The great thing about ... is the cutting edge projects
+                      that developers get to work with! Since coming to ...,
+                      I’ve been able to work with more fun and exciting projects
+                      than in all of my previous jobs combined.
+                    </blockquote>
+                    <p class="testimonial-namn">Andreas Nelefelt</p>
+                    <p class="testimonial-jobb">Senior developer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="profile">
+                  <img src="img/filip-img.jpg" />
+                  <div>
+                    <blockquote class="testimonial-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repudiandae neque ipsa commodi minus tenetur perferendis,
+                      corporis natus ullam incidunt eligendi perspiciatis
+                      praesentium? Quibusdam ex dolorum expedita vel sapiente
+                      consequuntur veniam?
+                    </blockquote>
+                    <p class="testimonial-namn">Filip Sanderfelt</p>
+                    <p class="testimonial-jobb">Senior developer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="profile">
+                  <img src="img/portfolio-img.jpg" />
+                  <div>
+                    <blockquote class="testimonial-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repudiandae neque ipsa commodi minus tenetur perferendis,
+                      corporis natus ullam incidunt eligendi perspiciatis
+                      praesentium? Quibusdam ex dolorum expedita vel sapiente
+                      consequuntur veniam?
+                    </blockquote>
+                    <p class="testimonial-namn">Gustav Håkansson</p>
+                    <p class="testimonial-jobb">Junior developer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="profile">
+                  <img src="img/andreas-img.jpg" />
+                  <div>
+                    <blockquote class="testimonial-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repudiandae neque ipsa commodi minus tenetur perferendis,
+                      corporis natus ullam incidunt eligendi perspiciatis
+                      praesentium? Quibusdam ex dolorum expedita vel sapiente
+                      consequuntur veniam?
+                    </blockquote>
+                    <p class="testimonial-namn">Peter Thunvall</p>
+                    <p class="testimonial-jobb">Junior developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-sidebar">
+              <button class="testimonial-btn btn--down">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="btn-icon"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <button class="testimonial-btn btn--up">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="btn-icon"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 15l7-7 7 7"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-        <p class="om-oss-p">
-          Vi är ett gäng washed-up stundentkodare som knappt kan kod, anlita oss
-          om ni vill ha det sloppigaste jobbet framtaget av ORU. Bla bla bla,
-          bla bla bla bla bla. Bla bla bla bla bla bla....
-        </p>
       </section>
 
       <br />
@@ -323,5 +314,13 @@
         Copyright &#169; Grupp 28. All Right Reserved.
       </div>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
