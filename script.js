@@ -85,21 +85,21 @@ function pauseAndPlaySlide() {
 
 // Carousell funktion för om oss sektion
 const testimonialSlide = document.querySelector(".testimonial-slide");
-const btnDown = document.querySelector(".btn--down");
-const btnUp = document.querySelector(".btn--up");
+const btnRight = document.querySelector(".btn--right");
+const btnLeft = document.querySelector(".btn--left");
 
 let x = 0;
 
-btnDown.onclick = function () {
-  if (x > -900) {
-    x = x - 300;
-    testimonialSlide.style.top = x + "px";
+btnRight.onclick = function () {
+  if (x > -3600) {
+    x = x - 1200;
+    testimonialSlide.style.left = x + "px";
   }
 };
 
-btnUp.onclick = function () {
+btnLeft.onclick = function () {
   if (x < 0) {
-    x = x + 300;
-    testimonialSlide.style.top = x + "px";
+    x = x + 1200;
+    testimonialSlide.style.left = x + "px";
   }
 };

@@ -290,8 +290,23 @@ ion-icon {
   background: #15aabf;
 }
 
+.testimonial-slide {
+  width: 4800px;
+  box-sizing: border-box;
+
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  transition: 0.5s;
+}
+
 .card {
   height: 300px;
+  width: 1200px;
   padding: 25px;
   color: #fff;
   line-height: 22px;
@@ -315,7 +330,7 @@ ion-icon {
 
 .testimonial-text {
   padding: 56px 0;
-  margin-right: 100px;
+  margin-right: 50px;
   font-size: 24px;
   color: #e6fcf5;
 }
@@ -329,19 +344,6 @@ ion-icon {
 .testimonial-jobb {
   font-size: 16px;
   color: #c3fae8;
-}
-
-.testimonial-slide {
-  width: 100%;
-  box-sizing: border-box;
-
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  transition: 0.5s;
 }
 
 .testimonial-sidebar {
@@ -359,12 +361,17 @@ ion-icon {
   align-items: center;
 }
 
+.sidebar--left {
+  left: 0;
+}
+
 /* CONTROLS */
 .testimonial-btn {
   background-color: #fff;
   border: none;
   height: 40px;
   width: 40px;
+  top: 40%;
   border-radius: 50%;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -373,12 +380,6 @@ ion-icon {
   align-items: center;
   justify-content: center;
   z-index: 999;
-}
-
-.btn--down {
-  /* In relation to PARENTE ELEMENT */
-  top: 83%;
-  /* In relation to ELEMENT ITSELF */
 }
 
 .btn-icon {
