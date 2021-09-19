@@ -261,11 +261,11 @@ ion-icon {
 /****************/
 /* Om Oss Section */
 /*****************/
-
 .om-oss-sektion {
   max-width: 100%;
   height: 300px;
   margin: auto;
+  padding-top: 64px;
 
   margin-bottom: 100px;
 }
@@ -284,14 +284,15 @@ ion-icon {
   max-width: 1200px;
   height: 300px;
   border-radius: 10px;
-  box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.25);
+  /* box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.25); */
   position: relative;
   overflow: hidden;
-  background: #15aabf;
+  /* background-color: #15aabf; */
 }
 
 .testimonial-slide {
   width: 4800px;
+  height: 300px;
   box-sizing: border-box;
 
   align-items: center;
@@ -318,18 +319,24 @@ ion-icon {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  margin-left: 40px;
+  margin-left: 60px;
   gap: 40px;
+  background-color: #15aabf;
+  border-radius: 10px;
+  box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.25);
+  padding-left: 48px;
+  height: 220px;
 }
 
 .profile img {
   height: 200px;
   width: 150px;
+  transform: scale(1.3);
   border-radius: 8px;
 }
 
 .testimonial-text {
-  padding: 56px 0;
+  padding-bottom: 32px;
   margin-right: 50px;
   font-size: 24px;
   color: #e6fcf5;
@@ -344,8 +351,10 @@ ion-icon {
 .testimonial-jobb {
   font-size: 16px;
   color: #c3fae8;
+  margin-bottom: 8px;
 }
 
+/*
 .testimonial-sidebar {
   width: 60px;
   height: 100%;
@@ -364,6 +373,7 @@ ion-icon {
 .sidebar--left {
   left: 0;
 }
+*/
 
 /* CONTROLS */
 .testimonial-btn {
@@ -371,7 +381,6 @@ ion-icon {
   border: none;
   height: 40px;
   width: 40px;
-  top: 40%;
   border-radius: 50%;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -379,7 +388,16 @@ ion-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 40%;
   z-index: 999;
+}
+
+.btn--right {
+  right: 5px;
+}
+
+.btn--left {
+  left: 64px;
 }
 
 .btn-icon {
