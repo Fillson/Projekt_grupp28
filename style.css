@@ -10,21 +10,6 @@ Hover color: #0b7285
 
 */
 
-.background-text {
-  font-family: "Rubik", sans-serif;
-  line-height: 1;
-  font-weight: 600px;
-  color: white;
-  position: absolute;
-  z-index: 999;
-  top: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -43,6 +28,21 @@ body {
 /***********/
 /* HEADER */
 /**********/
+
+.background-text {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 600px;
+  color: white;
+  position: absolute;
+  z-index: 999;
+  top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
 
 .header {
   display: flex;
@@ -105,6 +105,10 @@ body {
 }
 
 .sticky .hero {
+  margin-top: 90px;
+}
+
+.sticky .section-portfolio {
   margin-top: 90px;
 }
 
@@ -671,4 +675,67 @@ ul {
   margin: 0;
   color: #bbbbbb;
   font-size: 15px;
+}
+
+/*************************/
+/* PORTFOLIO */
+/*************************/
+
+.section-portfolio {
+  background-color: #15aabf;
+  color: #fff;
+  padding-bottom: 28px;
+}
+
+.portfolio-heading {
+  font-size: 32px;
+  padding: 32px 0;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-table {
+  border-radius: 8px;
+  margin: 25px 0;
+  font-size: 24px;
+  min-width: 400px;
+  background-color: #ffffff;
+  color: #15aabf;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
+}
+
+.table-head {
+  font-size: 32px;
+  text-align: left;
+  color: #15aabf;
+}
+
+.portfolio-table th,
+.portfolio-table td {
+  padding: 12px 15px;
+}
+
+.portfolio-table td {
+  max-width: 648;
+  max-height: 962;
+}
+
+.portfolio-table tr {
+  padding: 32px 32px;
+  height: 200px;
+  font-size: 32px;
+}
+.portfolio-table tr img {
+  width: 100px;
+  transition: all 0.4s;
+}
+
+.portfolio-table tr img:hover {
+  transform: scale(2.5);
 }

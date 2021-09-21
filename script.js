@@ -104,8 +104,7 @@ btnLeft.onclick = function () {
   }
 };
 
-
-// Sticky navigation
+// Sticky navigation Main page
 const sectionHeroEl = document.querySelector(".background-text");
 
 const obs = new IntersectionObserver(
@@ -126,7 +125,6 @@ const obs = new IntersectionObserver(
     root: null,
     threshold: 0,
     rootMargin: "200px",
-    
   }
 );
 obs.observe(sectionHeroEl);
