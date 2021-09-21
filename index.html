@@ -115,13 +115,15 @@
                   <img src="img/andreas-img.jpg" />
                   <div class="profile-info">
                     <blockquote class="testimonial-text">
-                      &ldquo;The great thing about ... is the cutting edge projects
-                      that developers get to work with! Since coming to ...,
-                      I’ve been able to work with more fun and exciting projects
-                      than in all of my previous jobs combined."
+                      &ldquo;The great thing about ... is the cutting edge
+                      projects that developers get to work with! Since coming to
+                      ..., I’ve been able to work with more fun and exciting
+                      projects than in all of my previous jobs combined."
                     </blockquote>
                     <p class="testimonial-namn">Andreas Nelefelt</p>
-                    <p class="testimonial-jobb">Chief technology officer (CTO)</p>
+                    <p class="testimonial-jobb">
+                      Chief technology officer (CTO)
+                    </p>
                     <div class="btn-mer-info-div">
                       <btn class="btn-mer-info">Mer info</btn>
                     </div>
@@ -237,7 +239,14 @@
             <form class="kontakta-oss-form" name="kontakt" netlify>
               <div>
                 <label for="full-name">Fulltständigt namn</label>
-                <input id="full-name" type="text" name="full-name" required />
+                <input
+                  id="full-name"
+                  type="text"
+                  name="full-name"
+                  pattern="^(?![\s.]+$)[a-zA-Z\s.]*$"
+                  minlength="3"
+                  required
+                />
               </div>
 
               <div>
@@ -246,6 +255,8 @@
                   id="email"
                   type="email"
                   placeholder="me@example.se"
+                  pattern="\A[\w!#$%&'*+/=?`{|}~^-]+(?:\.[\w!#$%&'*+/=?`{|}~^-]+)*@↵
+                  (?:[A-Z0-9-]+\.)+[A-Z]{2,6}\Z"
                   name="email"
                   required
                 />
@@ -253,7 +264,13 @@
 
               <div>
                 <label for="telephone">Telefon</label>
-                <input id="telephone" type="tel" required />
+                <input
+                  id="telephone"
+                  type="tel"
+                  placeholder=""
+                  pattern="^[0-9]{6}[0-9]{4}$"
+                  required
+                />
               </div>
 
               <div>
@@ -262,6 +279,7 @@
                   id="message"
                   type="text"
                   placeholder="Skriv ditt meddelande här"
+                  pattern="^(?!\s*$).+"
                   required
                 />
               </div>
