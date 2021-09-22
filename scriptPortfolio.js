@@ -98,3 +98,35 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionPortfolioEl);
+
+// FULLSCREEN API
+
+// Funktion som kollar för vilka element fullscreen körs på
+
+function getFullscreenElement() {
+  return (
+    document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullscreenElement ||
+    document.msFullscreenElement
+  );
+}
+
+// Funktion för att toggla fullscreen beroende på om den är igång eller ej
+function toggleFullscreen() {
+  if (getFullscreenElement()) {
+    document.exitFullscreen();
+  } else {
+    document
+      .getElementById("section-portfolio")
+      .requestFullscreen()
+      .catch(console.log());
+  }
+}
+
+// Funktionen körs om man trycker ner "Enter" tangenten.
+document.addEventListener("keydown", function () {
+  if (event.keyCode == 13) {
+    toggleFullscreen();
+  }
+});

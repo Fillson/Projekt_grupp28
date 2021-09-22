@@ -128,3 +128,69 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
+
+// FULLSCREEN API
+
+// Funktion som kollar för vilka element fullscreen körs på
+function getFullscreenElement() {
+  return (
+    document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullscreenElement ||
+    document.msFullscreenElement
+  );
+}
+
+// Funktion för att toggla fullscreen beroende på om den är igång eller ej
+function toggleFullscreen() {
+  if (getFullscreenElement()) {
+    document.exitFullscreen();
+  } else {
+    document
+      .getElementById("om-oss-sektion")
+      .requestFullscreen()
+      .catch(console.log());
+  }
+}
+
+// Funktionen körs om man trycker ner "Enter" tangenten.
+document.addEventListener("keydown", function () {
+  if (event.keyCode == 13) {
+    toggleFullscreen();
+  }
+});
+
+// Spara formulär data till JSON
+const sparaData = function (ev) {
+  ev.preventDefault();
+  let person = {
+    fullName: document.getElementById("full-name").value,
+    email: document.getElementById("email").value,
+    telephone: document.getElementById("telephone").value,
+    message: document.getElementById("message").value,
+  };
+  document.querySelector("form").reset(); // Cleara formen
+  console.log(person);
+
+  // Spara till localStorage
+  localStorage.setItem("minData", JSON.stringify(person));
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".btn-form").addEventListener("click", sparaData);
+});
+
+// Ladda formulär data från localStroge med JSON
+
+function laddaData() {
+  if (localStorage.getItem("minData") !== null) {
+    let inputParse = JSON.parse(localStorage.getItem("minData"));
+    $.each(inputParse, function (key, value) {
+      console.log(key, value);
+      let field = document.getElementById(key);
+      field.value = value;
+    });
+  }
+}
+// Fyller formuläret med Datan från JSON när all DOM content har laddats.
+document.addEventListener("DOMContentLoaded", laddaData);
