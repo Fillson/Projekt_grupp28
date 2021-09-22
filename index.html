@@ -8,6 +8,7 @@
     <title>Projekt grupp28</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -26,6 +27,9 @@
     <header class="header">
       <nav class="main-nav">
         <ul class="main-nav-list">
+          <li>
+            <a class="main-nav-link" href="index.html">Hem</a>
+          </li>
           <li>
             <a class="main-nav-link" href="#om-oss-testimonial">Om oss</a>
           </li>
@@ -63,7 +67,7 @@
           </h1>
           <p>Läs mer om vad vi kan erbjuda</p>
           <div class="buttons">
-            <a href="#telephone" class="button">Om oss</a>
+            <a href="index_andreas.html" class="button">Om oss</a>
           </div>
           <!-- Next and Previous buttons-->
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -107,13 +111,12 @@
 
       <!--Carousel slideshow för om oss sektion -->
       <section class="om-oss-sektion" id="om-oss-sektion">
-        <h2 class="om-oss-h2">Om oss:</h2>
         <div class="om-oss-testimonial">
           <div class="testimonial-box">
             <div class="testimonial-slide" id="testimonial-slide">
               <div class="card">
                 <div class="profile">
-                  <img src="img/andreas-img.jpg" />
+                  <img src="img/andreas-img.jpg" class="card-img" />
                   <div class="profile-info">
                     <blockquote class="testimonial-text">
                       &ldquo;The great thing about ... is the cutting edge
@@ -126,14 +129,16 @@
                       Chief technology officer (CTO)
                     </p>
                     <div class="btn-mer-info-div">
-                      <btn class="btn-mer-info">Mer info</btn>
+                      <a class="btn-mer-info" href="index_andreas.html"
+                        >Mer info</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card">
                 <div class="profile">
-                  <img src="img/filip-img.jpg" />
+                  <img src="img/filip-img.jpg" class="card-img" />
                   <div class="profile-info">
                     <blockquote class="testimonial-text">
                       "Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -141,16 +146,18 @@
                       corporis natus ullam."
                     </blockquote>
                     <p class="testimonial-namn">Filip Sanderfelt</p>
-                    <p class="testimonial-jobb">Technical operations officer</p>
+                    <p class="testimonial-jobb">Lead programmer</p>
                     <div class="btn-mer-info-div">
-                      <btn class="btn-mer-info">Mer info</btn>
+                      <a class="btn-mer-info" href="index_filip.html"
+                        >Mer info</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card">
                 <div class="profile">
-                  <img src="img/portfolio-img.jpg" />
+                  <img src="img/portfolio-img.jpg" class="card-img" />
                   <div class="profile-info">
                     <blockquote class="testimonial-text">
                       "Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -160,14 +167,16 @@
                     <p class="testimonial-namn">Gustav Håkansson</p>
                     <p class="testimonial-jobb">Full-stack developer</p>
                     <div class="btn-mer-info-div">
-                      <btn class="btn-mer-info">Mer info</btn>
+                      <a class="btn-mer-info" href="index_gustav.html"
+                        >Mer info</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card">
                 <div class="profile">
-                  <img src="img/peter-img.jpg" />
+                  <img src="img/peter-img.jpg" class="card-img" />
                   <div class="profile-info">
                     <blockquote class="testimonial-text">
                       "Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -177,7 +186,9 @@
                     <p class="testimonial-namn">Peter Thunvall</p>
                     <p class="testimonial-jobb">Data scientist</p>
                     <div class="btn-mer-info-div">
-                      <btn class="btn-mer-info">Mer info</btn>
+                      <a class="btn-mer-info" href="index_peter.html"
+                        >Mer info</a
+                      >
                     </div>
                   </div>
                 </div>

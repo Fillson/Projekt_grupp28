@@ -87,20 +87,66 @@ function pauseAndPlaySlide() {
 const testimonialSlide = document.querySelector(".testimonial-slide");
 const btnRight = document.querySelector(".btn--right");
 const btnLeft = document.querySelector(".btn--left");
-
+const desktop = window.matchMedia("(max-width: 1400px)");
+const laptop = window.matchMedia("(max-width: 1023px)");
 let x = 0;
 
 btnRight.onclick = function () {
-  if (x > -3600) {
-    x = x - 1200;
-    testimonialSlide.style.left = x + "px";
+  console.log(testimonialSlide.offsetWidth);
+  if (testimonialSlide.offsetWidth === 3600) {
+    if (x > -2700) {
+      x = x - 900;
+      testimonialSlide.style.left = x + "px";
+    }
+  } else if (testimonialSlide.offsetWidth === 3200) {
+    if (x > -2400) {
+      x = x - 800;
+      testimonialSlide.style.left = x + "px";
+    }
+  } else if (testimonialSlide.offsetWidth === 2400) {
+    if (x > -1800) {
+      x = x - 600;
+      testimonialSlide.style.left = x + "px";
+    }
+  } else if (testimonialSlide.offsetWidth === 1600) {
+    if (x > -1200) {
+      x = x - 400;
+      testimonialSlide.style.left = x + "px";
+    }
+  } else {
+    if (x > -3600) {
+      x = x - 1200;
+      testimonialSlide.style.left = x + "px";
+    }
   }
 };
 
 btnLeft.onclick = function () {
-  if (x < 0) {
-    x = x + 1200;
-    testimonialSlide.style.left = x + "px";
+  if (testimonialSlide.offsetWidth === 3600) {
+    if (x < 0) {
+      x = x + 900;
+      testimonialSlide.style.left = x + "px";
+    }
+  } else if (testimonialSlide.offsetWidth === 3200) {
+    if (x < 0) {
+      x = x + 800;
+      testimonialSlide.style.left = x + "px";
+    }
+  } else if (testimonialSlide.offsetWidth === 2400) {
+    if (x < 0) {
+      x = x + 600;
+      testimonialSlide.style.left = x + "px";
+    }
+  } else if (testimonialSlide.offsetWidth === 1600) {
+    if (x < 0) {
+      x = x + 400;
+      testimonialSlide.style.left = x + "px";
+    }
+  } else {
+    if (x < 0) {
+      x = x + 1200;
+      testimonialSlide.style.left = x + "px";
+    }
   }
 };
 
@@ -164,7 +210,7 @@ document.addEventListener("keydown", function () {
 const sparaData = function (ev) {
   ev.preventDefault();
   let person = {
-    fullName: document.getElementById("full-name").value,
+    fullName: document.getElementById("fullName").value,
     email: document.getElementById("email").value,
     telephone: document.getElementById("telephone").value,
     message: document.getElementById("message").value,

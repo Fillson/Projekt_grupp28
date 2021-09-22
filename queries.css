@@ -1,0 +1,288 @@
+/********************/
+/* Under 1400px */
+/********************/
+@media (max-width: 1400px) {
+  .testimonial-box {
+    width: 900px;
+  }
+
+  .testimonial-slide {
+    width: 3600px;
+  }
+
+  .card {
+    width: 900px;
+    height: 350px;
+  }
+
+  .profile-info {
+    grid-template-columns: 200px 350px;
+    grid-template-rows: 117px 27px;
+    max-width: 400px;
+    max-height: 250px;
+  }
+
+  .testimonial-text {
+    grid-column: 1/-1;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .testimonial-namn {
+    padding-top: 4px;
+  }
+
+  .testimonial-jobb {
+  }
+
+  .btn-mer-info-div {
+    padding: 25px 10px;
+  }
+
+  .btn-mer-info {
+  }
+}
+
+@media (max-width: 1450px) {
+  .aboutmequote {
+    padding: 40px 100px;
+  }
+
+  .aboutmequote:before {
+    font-size: 400%;
+
+    top: 12%;
+    left: 8%;
+  }
+}
+/*small tablets to big tablets: from 768 to 1023px */
+/* ABUOT ME */
+
+@media (max-width: 1023px) {
+  /* Carousel */
+  .testimonial-box {
+    width: 800px;
+  }
+
+  .testimonial-slide {
+    width: 3200px;
+    align-items: baseline;
+  }
+
+  .card {
+    width: 800px;
+    height: 350px;
+  }
+
+  .profile-info {
+    grid-template-columns: 200px 250px;
+    grid-template-rows: 117px 27px;
+    max-width: 800px;
+    max-height: 250px;
+  }
+
+  .testimonial-text {
+    grid-column: 1/-1;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .testimonial-namn {
+    padding-top: 4px;
+  }
+
+  .testimonial-jobb {
+  }
+
+  .btn-mer-info-div {
+    padding: 20px 50px;
+  }
+
+  .btn-mer-info {
+  }
+
+  .aboutmequote {
+    padding: 40px 100px;
+  }
+
+  .aboutmequote:before {
+    font-size: 400%;
+
+    top: 12%;
+    left: 8%;
+  }
+}
+
+@media (max-width: 810px) {
+  /* Carousel */
+  .testimonial-box {
+    width: 400px;
+  }
+
+  .testimonial-slide {
+    width: 1600px;
+  }
+
+  .card {
+    width: 400px;
+    height: 250px;
+  }
+
+  .profile {
+    padding-left: 0;
+    gap: 5px;
+  }
+
+  .profile img {
+    border-radius: 50%;
+    transform: scale(1);
+    height: 120px;
+  }
+
+  .profile-info {
+    grid-template-columns: 100px 103px;
+    grid-template-rows: 145px 43px 30px;
+    max-width: 400px;
+    max-height: 350px;
+  }
+
+  .testimonial-text {
+    grid-column: 1/-1;
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 12px 6px;
+  }
+
+  .testimonial-namn {
+    padding-top: 0;
+    font-size: 14px;
+  }
+
+  .testimonial-jobb {
+    padding-top: 0;
+    font-size: 12px;
+    grid-column: 2;
+    grid-row: 2/-3;
+  }
+
+  .btn-mer-info-div {
+    grid-column: 1/2;
+    grid-row: 3;
+    padding: 0px 12px;
+  }
+
+  .btn-mer-info {
+    width: 150px;
+    padding: 0;
+  }
+}
+
+/* Small phones to small tablets: from 481 to 767px */
+@media (max-width: 767px) {
+  .container {
+    max-width: 480px;
+  }
+  .container .footer-col {
+    width: 50%;
+    padding: 20px 20px;
+  }
+}
+
+/* ABUOT ME */
+
+@media (max-width: 767px) {
+  .aboutmequote {
+    padding: 40px 60px;
+  }
+
+  .aboutmequote:before {
+    font-size: 400%;
+
+    top: 12%;
+    left: 5%;
+  }
+}
+
+/********************/
+/* Under 500px */
+/********************/
+@media (max-width: 480px) {
+  /* CAROUSEL */
+
+  .hero {
+    margin-bottom: 10px;
+  }
+  .div-dots-container {
+    margin-bottom: 10px;
+  }
+
+  /* ABUOT ME */
+
+  @media (max-width: 480px) {
+    .aboutmequote {
+      padding: 40px 40px;
+    }
+
+    .aboutmequote:before {
+      font-size: 300%;
+
+      top: 12%;
+      left: 5%;
+    }
+  }
+
+  /* KONTAKA OSS */
+
+  /*PORTFOLIO*/
+  .section-portfolio {
+    max-width: 450px;
+    background-color: #15aabf;
+  }
+
+  .portfolio-heading {
+    font-size: 20px;
+    padding: 12px 0;
+    margin-bottom: 4px;
+  }
+
+  .portfolio-table {
+    margin: 8px 0;
+    max-width: 300px;
+    font-size: 16px;
+  }
+
+  .table-head {
+    font-size: 20px;
+  }
+
+  .portfolio-table th,
+  .portfolio-table td {
+    padding: 4px 0;
+  }
+
+  .portfolio-table td {
+    max-width: 300px;
+    max-height: 400px;
+  }
+
+  .portfolio-table tr {
+    height: 50px;
+    font-size: 12px;
+    padding: 12px 6px;
+  }
+
+  .portfolio-table tr img {
+    width: 50px;
+    height: 50px;
+  }
+}
+/* FOOTER */
+@media (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+  .container .footer-col {
+    width: 50%;
+    padding: 20px 20px;
+  }
+}
