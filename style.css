@@ -398,27 +398,6 @@ ion-icon {
   margin-bottom: 8px;
 }
 
-/*
-.testimonial-sidebar {
-  width: 60px;
-  height: 100%;
-  padding: 15px 0;
-  background: #fff;
-  position: absolute;
-  right: 0;
-  top: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.sidebar--left {
-  left: 0;
-}
-*/
-
 /* CONTROLS */
 .testimonial-btn {
   background-color: #fff;
