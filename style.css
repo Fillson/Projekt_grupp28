@@ -17,12 +17,17 @@ Hover color: #0b7285
   scroll-behavior: smooth;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: #555;
   background-color: #f8f9fa;
+  overflow-x: hidden;
 }
 
 /***********/
@@ -51,7 +56,7 @@ body {
 
   /* Because we want header to be sticky later */
   height: 90px;
-  padding: 0 4.8rem;
+  padding: 0 18px;
   position: relative;
 }
 
@@ -86,7 +91,24 @@ body {
 .main-nav-link:active {
   color: #15aabf;
 }
+/* MOBUL NAV */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
 
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 48px;
+  width: 48px;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
 /*************/
 /* STICKY NAV */
 /*************/
@@ -149,6 +171,7 @@ body {
 
   position: relative;
   margin-bottom: 50px;
+  z-index: 1;
 }
 
 /* Hide the images by default */
@@ -239,7 +262,7 @@ ion-icon {
 .dots-container {
   text-align: center;
   margin-top: 32px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .dot {
@@ -283,6 +306,66 @@ ion-icon {
   to {
     opacity: 1;
   }
+}
+/****************/
+/* Om Oss generellt (startsida) */
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  padding: auto;
+}
+.section-features {
+  padding: 80px 0;
+  margin-top: 0px;
+}
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+.col {
+  display: block;
+  float: left;
+  margin: 1.2% 0 1.2% 1.2%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.span-1-of-4 {
+  width: 23.8%;
+}
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+.icon-big {
+  color: #15aabf;
+  display: block;
+  font-size: 350%;
+  margin-bottom: 10px;
+}
+.underline {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.underline:after {
+  display: block;
+  height: 2px;
+  background-color: #15aabf;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 /****************/
@@ -551,9 +634,9 @@ ion-icon {
       rgba(0, 0, 20, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url("/img/form-img.jpg");
-  background-size: cover;
+    url("/img/form-img2.jpg");
   background-position: center;
+  background-size: cover;
 }
 
 .btn-form,

@@ -30,20 +30,23 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li>
-            <a class="main-nav-link" href="#om-oss-testimonial">Om oss</a>
+            <a class="main-nav-link" href="index.html">Om oss</a>
           </li>
           <li>
-            <a class="main-nav-link" href="#kontakta-oss">Kontakta oss</a>
+            <a class="main-nav-link" href="index.html">Kontakta oss</a>
           </li>
           <li>
-            <a class="main-nav-link" href="#portfolio">Portfolio</a>
+            <a class="main-nav-link" href="index_portfolio.html">Portfolio</a>
           </li>
           <li>
             <a class="main-nav-link" href="index.html">Hem</a>
           </li>
         </ul>
       </nav>
-
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
       <!---
      NAV HEADER
     --></header>
@@ -180,6 +183,14 @@
       });
       $(".react .bar").circleProgress({
         value: 0.6,
+      });
+
+      // MOBILE NAVIGATION
+      const btnNavEl = document.querySelector(".btn-mobile-nav");
+      const headerEl = document.querySelector(".header");
+
+      btnNavEl.addEventListener("click", function () {
+        headerEl.classList.toggle("nav-open");
       });
     </script>
   </body>

@@ -31,7 +31,7 @@
             <a class="main-nav-link" href="index.html">Hem</a>
           </li>
           <li>
-            <a class="main-nav-link" href="#om-oss-testimonial">Om oss</a>
+            <a class="main-nav-link" href="#dots-container">Om oss</a>
           </li>
           <li>
             <a class="main-nav-link" href="#kontakta-oss">Kontakta oss</a>
@@ -41,13 +41,11 @@
           </li>
         </ul>
       </nav>
-
-      <!---
       <button class="btn-mobile-nav">
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
         <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-      </button> 
-    --></header>
+      </button>
+    </header>
     <main>
       <div class="hero">
         <div class="background-text">
@@ -101,13 +99,64 @@
         </div>
 
         <!--The dots/circles -->
-        <div class="dots-container">
+        <div class="dots-container" id="dots-container">
           <span class="dot" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
           <span class="dot" onclick="currentSlide(4)"></span>
         </div>
       </div>
+      <section class="section-features js--section-features" id="features">
+        <div class="row">
+          <h2 class="underline">Få rätt hjälp &mdash; med rätt kompetens!</h2>
+          <p class="long-copy">
+            Vi är en handfull utvecklare beståendes av unika kompetenser och
+            bakgrunder. Vi kan erbjuda specialistkompetens oavsett vilket område
+            du behöver hjälp med att utveckla. Vi ser varje uppdrag som en ny
+            unik chans att få fortsätta utveckla våra kunskaper!
+          </p>
+        </div>
+
+        <div class="row js--wp-1">
+          <div class="col span-1-of-4">
+            <ion-icon name="chatbubbles-outline" class="icon-big"></ion-icon>
+            <h3>Feedback</h3>
+            <p>
+              Vi tror att nyckeln till ett lyckat projekt är en god
+              kommunikation mellan kund och leverantör. Under projektets gång
+              efterfrågar vi regelbunden feedback på det vi skapar!
+            </p>
+          </div>
+          <div class="col span-1-of-4">
+            <ion-icon name="stopwatch-outline" class="icon-big"></ion-icon>
+            <h3>Tidseffektiva</h3>
+            <p>
+              Vi använder den senaste tekniken inom testning och debugging så
+              att du kan få din produkt på nolltid och samtidigt slippa
+              irriterrande buggar!
+            </p>
+          </div>
+          <div class="col span-1-of-4">
+            <ion-icon name="bar-chart-outline" class="icon-big"></ion-icon>
+            <h3>Uppföljning</h3>
+            <p>
+              Vi vill säkerställa så att din nya produkt generar maximal effekt
+              därför ingår en kostandsfri uppföljning där vi justerar delar som
+              kan bli mer optimala!
+            </p>
+          </div>
+          <div class="col span-1-of-4">
+            <ion-icon name="cart-outline" class="icon-big"></ion-icon>
+
+            <h3>Brett sortiment</h3>
+            <p>
+              Vår breda kompetens erbjuder ett brett sortiment av tjänster inom
+              bl.a. mobil och webbappar, Mjukvarulösningar, Design och grafik,
+              DevOps och Datahantering.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <!--Carousel slideshow för om oss sektion -->
       <section class="om-oss-sektion" id="om-oss-sektion">
@@ -119,10 +168,10 @@
                   <img src="img/andreas-img.jpg" class="card-img" />
                   <div class="profile-info">
                     <blockquote class="testimonial-text">
-                      &ldquo;The great thing about ... is the cutting edge
-                      projects that developers get to work with! Since coming to
-                      ..., I’ve been able to work with more fun and exciting
-                      projects than in all of my previous jobs combined."
+                      &ldquo; Jag har alltid brunnit för att utveckla projekt
+                      och se de resultat som följer. Känslan är densamma,
+                      oavsett om uppdraget innefattar att bygga en simplare
+                      applikation eller ett mer komplex system! "
                     </blockquote>
                     <p class="testimonial-namn">Andreas Nelefelt</p>
                     <p class="testimonial-jobb">
@@ -248,7 +297,7 @@
               Full-stack utvecklare....
             </p>
 
-            <form class="kontakta-oss-form" name="kontakt" netlify>
+            <form class="kontakta-oss-form" name="kontakt">
               <div>
                 <label for="full-name">Fulltständigt namn</label>
                 <input
