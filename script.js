@@ -1,9 +1,9 @@
 var slideIndex = 0;
-let autoSlideTimeout = 5000; //(Keeping timeout as variable is also a good idea)
+let autoSlideTimeout = 5000; // Variabel för timern
 showSlides();
 var slides, dots, timerHandler;
 
-// For the manual slideshow buttons.
+// Funktion för de manuella knappar.
 function plusSlides(position) {
   slideIndex += position;
   if (slideIndex > slides.length) {
@@ -20,13 +20,13 @@ function plusSlides(position) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 
-  // Resets the timer
+  // Resetar timern
   clearTimeout(timerHandler);
-  // Starts the timer again
+  // Startar timern igen
   timerHandler = setTimeout(showSlides, autoSlideTimeout);
 }
 
-// OnClick function for the dots below the slideshow.
+// OnClick funktion för "dotsen" under slideshowen.
 function currentSlide(index) {
   if (index > slides.length) {
     index = 1;
@@ -42,13 +42,13 @@ function currentSlide(index) {
   slides[index - 1].style.display = "block";
   dots[index - 1].className += " active";
 
-  // Resets the timer
+  // Resetar timern
   clearTimeout(timerHandler);
-  // Starts the timer again
+  // Startar timern igen
   timerHandler = setTimeout(showSlides, autoSlideTimeout);
 }
 
-// function for the automatic slideshow startsida
+// funktion för den automatiska slideshowen på startsidan.
 function showSlides() {
   var i;
   slides = document.getElementsByClassName("hero-slides");
@@ -67,7 +67,7 @@ function showSlides() {
   dots[slideIndex - 1].className += " active";
   timerHandler = setTimeout(showSlides, autoSlideTimeout);
 }
-// function för Pause och Play knappar
+// funktion för Pause och Play knappar
 function pauseAndPlaySlide() {
   const icon1 = document.querySelector(".pause-left ion-icon");
   const icon2 = document.querySelector(".pause-right ion-icon");
@@ -157,7 +157,7 @@ const headerEl = document.querySelector(".header");
 btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
-// Sticky navigation Main page
+// Sticky navigation  för Main page
 const sectionHeroEl = document.querySelector(".background-text");
 
 const obs = new IntersectionObserver(

@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(data);
       let parser = new DOMParser();
       let xml = parser.parseFromString(data, "application/xml");
-      /* document.getElementById("output").textContent = data; */
       fillTable(xml);
     });
 });
