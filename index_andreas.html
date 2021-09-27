@@ -19,7 +19,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
 
-    <script defer src="script.js"></script>
     <script src="https://kit.fontawesome.com/44f557ccce.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
@@ -75,15 +74,15 @@
       </h2>
       <div class="what">Python</div>
       <div class="skill-container">
-        <div class="skill s1 load"><span>80%</span></div>
+        <div class="wp1"><span>80%</span></div>
       </div>
       <div class="what">C#</div>
       <div class="skill-container">
-        <div class="skill s2 load"><span>60%</span></div>
+        <div class="wp2"><span>60%</span></div>
       </div>
       <div class="what">JavaScript</div>
       <div class="skill-container">
-        <div class="skill s3 load"><span>90%</span></div>
+        <div class="wp3"><span>90%</span></div>
       </div>
       <div class="wrapper">
         <div class="card_personal">
@@ -155,6 +154,7 @@
         Copyright &#169; Grupp 28. All Right Reserved.
       </div>
     </footer>
+    <script src="jquery.waypoints.min.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -163,6 +163,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
     <script>
       let options = {
         startAngle: -1.55,
@@ -170,20 +171,63 @@
         value: 0.7,
         fill: { gradient: ["#0b7285", "#15aabf"] },
       };
-      $(".circle .bar")
-        .circleProgress(options)
-        .on("circle-animation-progress", function (event, progress, stepValue) {
-          $(this)
-            .parent()
-            .find("span")
-            .text(String(stepValue.toFixed(2).substr(2)) + "%");
-        });
-      $(".js .bar").circleProgress({
-        value: 0.45,
-      });
-      $(".react .bar").circleProgress({
-        value: 0.6,
-      });
+
+      const $circleBar = $(".skills-section");
+      $circleBar.waypoint(
+        function () {
+          $(".circle .bar")
+            .circleProgress(options)
+            .on(
+              "circle-animation-progress",
+              function (event, progress, stepValue) {
+                $(this)
+                  .parent()
+                  .find("span")
+                  .text(String(stepValue.toFixed(2).substr(2)) + "%");
+              }
+            );
+          $(".js .bar").circleProgress({
+            value: 0.45,
+          });
+          $(".react .bar").circleProgress({
+            value: 0.6,
+          });
+          this.destroy();
+        },
+        {
+          offset: "40%",
+        }
+      );
+
+      $(".skills-section").waypoint(
+        function () {
+          console.log("waypoint");
+          $(".wp1").addClass("skill s1 load");
+        },
+        {
+          offset: "80%",
+        }
+      );
+
+      $(".skills-section").waypoint(
+        function () {
+          console.log("waypoint");
+          $(".wp2").addClass("skill s2 load");
+        },
+        {
+          offset: "75%",
+        }
+      );
+
+      $(".skills-section").waypoint(
+        function () {
+          console.log("waypoint");
+          $(".wp3").addClass("skill s3 load");
+        },
+        {
+          offset: "70%",
+        }
+      );
 
       // MOBILE NAVIGATION
       const btnNavEl = document.querySelector(".btn-mobile-nav");
