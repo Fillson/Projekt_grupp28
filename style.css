@@ -281,19 +281,10 @@ ion-icon {
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
@@ -1045,9 +1036,8 @@ span {
   transform: translate(-50%, -50%) scale(0.91);
 }
 .card_personal.circle .wrapper .card_personal {
-  background: -webkit-linear-gradient(left, #15aabf, #0b7285);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(left, #15aabf, #0b7285);
+  background-clip: text;
 }
 .circle .box span {
   font-size: 38px;
