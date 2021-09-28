@@ -7,7 +7,7 @@
         <startDate>2021-09-01</startDate>
         <endDate>20201-09-28</endDate>
         <image>img/portfolio-img4.jpg</image>
-        <description>Besrkvining</description>
+        <description>e-commerce</description>
     </project>
     <project id="p2">
         <manager>Filip Sanderfelt</manager>
@@ -16,7 +16,7 @@
         <startDate>2021-05-01</startDate>
         <endDate>20201-07-28</endDate>
         <image>img/portfolio-img6.jpg</image>
-        <description>Besrkvining</description>
+        <description>Portfolio</description>
     </project>
     <project id="p3">
         <manager>Gustav Håkansson</manager>
@@ -25,7 +25,7 @@
         <startDate>2021-03-01</startDate>
         <endDate>20201-09-20</endDate>
         <image>img/portfolio-img3.jpg</image>
-        <description>Besrkvining</description>
+        <description>Appversion av hemsida</description>
     </project>
     <project id="p4">
         <manager>Peter Thunvall</manager>
@@ -34,7 +34,7 @@
         <startDate>2021-08-01</startDate>
         <endDate>20201-09-28</endDate>
         <image>img/portfolio-img5.jpg</image>
-        <description>Besrkvining</description>
+        <description>Databas för användare</description>
     </project>
     <project id="p5">
         <manager>Andreas Nelefelt</manager>
@@ -43,6 +43,6 @@
         <startDate>2021-02-01</startDate>
         <endDate>20201-08-28</endDate>
         <image>img/portfolio-img1.jpg</image>
-        <description>Besrkvining</description>
+        <description>Appversion av hemsida</description>
     </project>
 </projects>
