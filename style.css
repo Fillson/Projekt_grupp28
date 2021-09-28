@@ -1036,8 +1036,7 @@ span {
   transform: translate(-50%, -50%) scale(0.91);
 }
 .card_personal.circle .wrapper .card_personal {
-  background: linear-gradient(left, #15aabf, #0b7285);
-  background-clip: text;
+  background: linear-gradient(to left, #15aabf, #0b7285);
 }
 .circle .box span {
   font-size: 38px;
